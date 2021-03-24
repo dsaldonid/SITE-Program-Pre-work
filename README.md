@@ -54,7 +54,7 @@ Here's a walkthrough of implemented user stories:
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
-https://www.w3schools.com/css/, https://darekkay.com/flexbox-cheatsheet/,Ellis Lee(gave incredible design critique),
+https://www.w3schools.com/css/, https://darekkay.com/flexbox-cheatsheet/, Ellis Lee (gave incredible design critique) @ https://www.ellislee.me/,
 https://developer.mozilla.org/en-US/,https://stackoverflow.com/
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
