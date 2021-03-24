@@ -49,44 +49,39 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-![](your-link-here)
+
+First, the user must choose a difficulty before they can play. The start button is disabled until a difficulty is selected (shown by the color change)
+![](https://i.imgur.com/YAtsVwM.gif)
+
+During gameplay the user will try to repeat the pattern they had just seen. There is text indicating which round the player is currently in.
+![](https://i.imgur.com/zjSQpS5.gif)
+
+If the player gets the pattern correct on the final round, they win! A pop-up will appear to ask them if they want to play again. Once the game is done, the original state of the game is returned.
+![](https://i.imgur.com/uG3s6sP.gif)
+
 
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
+
 https://www.w3schools.com/css/, https://darekkay.com/flexbox-cheatsheet/,Ellis Lee(gave incredible design critique),
 https://developer.mozilla.org/en-US/,https://stackoverflow.com/
 
-2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
-One of the biggest technical challenge I encountered was enabling the buttons after the sequence was played. Previous versions of the game disabled buttons 
-before the sequence was played but would enable the buttons while the sequence was playing. Ultimately, the problem was my lack of understanding of how setTimeout() 
-and asynchronous programming works. I learned that even though my enableButtons() function was outside my sequence for loop, the call was being prioritized in 
-our call stack. After tinkering around with the call placement and playing around with function closure, I came across a simple solution. I decided to call 
-the function via setTimeout() outside the loopwith a time length equal to our delay during the sequence. This would ensure that my enableButtons() function was 
-called after all the lights in the sequeunce have been played. 
+2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? 
 
-The biggest mental challenges I faced was changing my mindset on frontend web development. Coming into the project I was a bit sketical about the concept of what frontend 
-development encompassed to me. I've mostly focus on creating functionality with little to no visual display. While I was amored with diving deep into algorithmic detail, I spent 
-little time focusing on creating a usable product that could bring value to others.Everytime I tried to work on frontend visuals and functionality I genuinely hesitated. 
-However, this project really help me reconceptualize not only the emmense value of frontend development in a full stack, but also has me feeling excited to continue 
-developing my entire skillset throughtout the entire stack. It was a such a rewarding experience to genuinely create,build and iterate throughtout a project like this.
-In specific, I loved the ability to build the game and constantly iterate and develop the game to its "final" version and beyond. I'm excited to add these new skills to my
-own projects. Thank you for the opportunity to grow, CodePath, you a real one.
+One of the biggest technical challenge I encountered was enabling the buttons after the sequence was played. Previous versions of the game disabled buttons before the sequence was played but would enable the buttons while the sequence was playing. Ultimately, the problem was my lack of understanding of how setTimeout() and asynchronous programming works. I learned that even though my enableButtons() function was outside my sequence for loop, the call was being prioritized in the call stack. After tinkering around with the call placement and playing around with function closure, I came across a simple solution. I decided to call the function via setTimeout() outside the loopwith a time length equal to our delay during the sequence. This would ensure that my enableButtons() function was called after all the lights in the sequeunce have been played. 
 
-3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
+The biggest mental challenges I faced was changing my mindset on frontend web development. Coming into the project I was a bit sketical about the concept of what frontend development encompassed to me. I've mostly focus on creating functionality with little to no visual display. While I was amored with diving deep into algorithmic detail, I spent little time focusing on creating a usable product that could bring value to others.Everytime I tried to work on frontend visuals and functionality I genuinely hesitated. However, this project really help me reconceptualize not only the emmense value of frontend development in a full stack, but also has me feeling excited to continue developing my entire skillset throughtout the entire stack. It was a such a rewarding experience to genuinely create,build and iterate throughtout a project like this.In specific, I loved the ability to build the game and constantly iterate and develop the game to its "final" version and beyond. I'm excited to add these new skills to my own projects. Thank you for the opportunity to grow, CodePath, you a real one.
+
+3. What questions about web development do you have after completing your submission?
+
 The project showed me the importance of design critque in order to limit bias, but also the constraints a project may have. How do you leverage the constraints you've noticed
-to optimize your projects functionality and usability? In addition, what design principles are important to focus on while working on the project? I noticed myself having to 
-choose between what was feasible (with the given time on the project I had) and incorporating the design critque I got. Most importantly, I'm curious how you priortize and 
-compromise different component developing? Is it based on utility? What if two components have the same utility? The most important question is what about web development gets
+to optimize your projects functionality and usability? In addition, what design principles are important to focus on while working on the project? I noticed myself having to  choose between what was feasible (with the given time on the project I had) and incorporating the design critque I got. Most importantly, I'm curious how you priortize and compromise different component developing? Is it based on utility? What if two components have the same utility? The most important question is what about web development gets
 you the most excited?
 
-4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
-I would have added more user customized controllers. In particular, I would add a switch that allows the user to choose how if they want the remaining time to guess displayed. 
-Having a container besides my game would be a good place for location to ease visibility. The container would work similarly to how my pop-ups for winning and losing work. 
-If the user decides that they wanted a clock,via a switch on the page that would have an on change trigger, it would become visible. I would create a function that will 
-display the time within the clock container (haven't flushed out visuals specs yet). This would function similar to mine my function that displays the round number on the page.
-Additionally, I'd create a slider that allows the user to choose how much time they want for the pattern to play and for them to repeat the pattern. I'd have to be careful not
-to set the delay to zero, or close to it, to avoid buttons playing simultaneously. Just like my dropdown menu, the slider would disappear once the game beginners to avoid bugs.
+4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). 
+ 
+I would have added more user customized controllers. In particular, I would add a switch that allows the user to choose how if they want the remaining time to guess displayed. Having a container besides my game would be a good place for location to ease visibility. The container would work similarly to how my pop-ups for winning and losing work. If the user decides that they wanted a clock,via a switch on the page that would have an on change trigger, it would become visible. I would create a function that will display the time within the clock container (haven't flushed out visuals specs yet). This would function similar to mine my function that displays the round number on the page.Additionally, I'd create a slider that allows the user to choose how much time they want for the pattern to play and for them to repeat the pattern. I'd have to be careful not to set the delay to zero, or close to it, to avoid buttons playing simultaneously. Just like my dropdown menu, the slider would disappear once the game beginners to avoid bugs.
 
 
 
