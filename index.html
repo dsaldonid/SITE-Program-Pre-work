@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Brain Dots!</title>
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>  
+  <body class = "flexbox-container">
+    <h1>Welcome to Brain Dots</h1>
+    <h2>A light and sound memory game</h2>
+    <h3 id ="directions">How to play: First, select your difficulty. Then press start. 
+      When the game begins first watch the dots and then imitate them.</h3>
+    <h4 id = "roundCounter" class = "gone">
+      Round blank
+    </h4>
+    
+    
+    <div id ="gameButtonArea">
+      <button class ="overlap" id ="button1" onclick = "guess(1)" onmousedown="startTone(1)" onmouseup="stopTone()"></button>
+      <button class ="overlap" id ="button2" onclick = "guess(2)" onmousedown="startTone(2)" onmouseup="stopTone()"></button>
+      <button class ="overlap" id ="button3" onclick = "guess(3)" onmousedown="startTone(3)" onmouseup="stopTone()"></button>
+      <button class ="overlap" id ="button4" onclick = "guess(4)" onmousedown="startTone(4)" onmouseup="stopTone()"></button>
+      
+    </div>
+    
+    <div id ="loseBox" class= "gone">
+      <div id = "gameOver">
+        Game Over
+      </div>
+      <div id = "soClose">
+        So close. Maybe next time
+      </div>
+      <button id = "tryAgain" onclick = "loseRestart()">
+        Try Again
+      </button>
+    </div>
+    
+    <div id ="winBox" class= "gone"> 
+      <div id = "winner">
+        You Win!
+      </div>
+      <div id = "levelUp">
+        Test your skills in harder modes!
+      </div>
+      <button id = "tryAgain1" onclick = "winRestart()">
+        Try Again
+      </button>
+    </div>
+
+    <div id = "gameDifficulty" class="flexbox-container">
+      <label for="difficulty">Choose a difficulty:</label>
+      <select name="difficulty" id="difficulty" onchange ="get_pattern_length()"> 
+        <option value="default">Select One</option>
+        <option value="Easy">Easy</option>
+        <option value="Medium">Medium</option>
+        <option value="Hard">Hard</option>
+      </select>
+    
+
+    </div>
+    
+    <div id = "startStop">
+      <button class = "disabled-start" id = "startBtn" onclick = "startGame()">
+      Start
+      </button>
+
+      <button id = "stopBtn" class= "gone enabled-start" onclick = "stopGame()"> 
+      Stop
+      </button>
+    </div>
+    
+    
+    
+  </body>
+</html>

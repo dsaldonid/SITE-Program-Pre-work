@@ -1,0 +1,248 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+  background-color: #FFFFFF;;
+}
+
+/*Header specs */
+h1 {
+  width: 644px;
+  height: 6px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 96px;
+  display: flex;
+  text-align: center;
+  color: #000000;
+}
+
+h2{
+  width: 504px;
+  height: 14px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 54px;
+  color: #699BF7;
+}
+
+h3{
+  width: 607px;
+  height: 20px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+
+  color: #71819E;
+}
+
+h4{
+  height:20px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  color: #71819E;
+}
+
+/*Label text specs*/
+label{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #767676;
+}
+
+/*Extra specs for stop/start button */
+#startBtn,#stopBtn{
+  border:None;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 24px;
+  border-radius: 4px;
+  outline: none;
+}
+
+/*Highlight disabled state for state button if no diffoculty selected*/
+.disabled-start{
+  background:#87D4AC;
+}
+
+/*Change start button colot to reflect enabled state*/
+.enabled-start{
+  background: #0FA958;
+}
+
+/*Create hover states for highlighting usability to users*/
+#startBtn:hover,#stopBtn:hover,#tryAgain:hover,#tryAgain1:hover{
+  background: #15D06E;
+}
+
+#startBtn:active,#stopBtn:active,#tryAgain:active,#tryAgain1:active{
+  background: #159C55;
+}
+
+
+/*Button specs */
+button{
+  padding: 10px;
+  border-radius: 4px;
+  outline: none;
+  color: white;
+}
+
+/*Specs for dropdown*/
+select{
+  width:300px;
+  height:60px;
+  margin:10px;
+}
+
+/*change display of every button under gameButtonArea container*/
+#gameButtonArea > button{
+  width:200px;
+  height:200px;
+  width: 225px;
+  height: 225px;
+  border-radius: 125px;
+}
+
+/*Have circles overlap before game starts*/
+.overlap{
+  margin:-40px;
+}
+
+/*Give our buttons space to breathe*/
+#gameButtonArea{
+  margin:20px;
+}
+
+/*Kept our end button hidden until game starts*/
+.gone{
+  visibility: hidden;
+}
+
+/*Disable button presses while seqeunce is playing*/
+.disable{
+  pointer-events: none;
+}
+
+/*Set button background colors*/
+
+#button1 {
+    left: 431px;
+    top: 334px;
+    background:#FFC700;
+}
+
+#button2 {
+    left: 557px;
+    top: 334px;
+    background: #FF8577;
+}
+
+#button3 {
+    left: 670px;
+    top: 334px;
+    background: #699BF7;
+}
+
+#button4 {
+    left: 783px;
+    top: 334px;
+    background: #C7B9FF;
+}
+
+
+/*Adding pseudo-class for each button when button is pressed on*/
+#button1:active ,#button1.lit{
+    background:#FFE999;
+}
+
+#button2:active ,#button2.lit{
+    background:#FFC2BB;
+}
+
+#button3:active ,#button3.lit{
+    background:#ACC9FF;
+}
+
+#button4:active ,#button4.lit{
+    background:#E3DCFF;
+}
+
+/* Specs for boxes when player wins or loses */
+#loseBox,#winBox{
+  text-align:center;
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100px;
+  color: #000000;
+  width: 315px;
+  height: 166px; 
+  position: absolute;
+  margin: 0 auto;
+  height: 30vh;
+  background:#F7FAFC;
+}
+
+/*Specs for text on pop box when game ends*/
+#gameOver,#winner{
+  position:relative;
+  top:10px;
+}
+
+/*Specs for text on pop box when game ends*/
+#soClose,#levelUp{
+  position:relative;
+  top:15px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  font-color: #00;
+  line-height: 20px;
+  color: #699BF7;
+}
+
+/* Specs for try again buttons on popups when game ends */
+#tryAgain,#tryAgain1{
+  position:relative;
+  top:40px;
+  background: #0FA958;
+  border-radius: 4px;
+  border:None;
+}
+
+/* Using flexbox to center contents on any window size*/
+.flexbox-container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  
+}
+
+/* Class to spread circles once game begins */
+.circle-spread{
+  margin: 0px 24px 0px ;
+}
+
